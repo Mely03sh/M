@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobil Super Moto™</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            padding-top: 100px;
+            /* Altura del navbar */
+        }
+
+        .navbar {
+            background-color: #000000;
+            /* Color de fondo del navbar */
+        }
+
+        .navbar-brand img {
+            max-height: 80px;
+            /* Altura máxima del logo */
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #fff;
+            /* Color de texto de los enlaces */
+        }
+
+        .card {
+            border: none;
+            /* Quita el borde de las tarjetas */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            /* Efecto de elevación en hover */
+        }
+
+        .card-title {
+            color: #333;
+            /* Color del título de la tarjeta */
+        }
+
+        .card-text {
+            color: #666;
+            /* Color del texto de la tarjeta */
+        }
+
+        .card-price {
+            background-color: #dc3545;
+            /* Color de fondo del precio */
+            color: #fff;
+            /* Color del texto del precio */
+            padding: 5px 10px;
+            /* Espaciado interno del precio */
+            border-radius: 5px;
+            /* Borde redondeado del precio */
+            font-weight: bold;
+            /* Texto en negrita del precio */
+        }
+
+        .footer {
+            background-color: #000000;
+            /* Color de fondo del footer */
+            color: #fff;
+            /* Color del texto del footer */
+            padding: 50px 0;
+            /* Espaciado interno del footer */
+        }
+
+        .footer a {
+            color: #fff;
+            /* Color de los enlaces del footer */
+        }
+
+        /* Estilos para el modo claro */
+        body.light-mode {
+            background-color: #f8f9fa;
+            color: #000000;
+        }
+
+        .navbar.light-mode {
+            background-color: #343a40;
+        }
+
+        /* Estilos para el modo oscuro */
+        body.dark-mode {
+            background-color: #222;
+            color: #fff;
+        }
+
+        .navbar.dark-mode {
+            background-color: #111;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Proyectof/Proyectof/index.html">
+                <img src="motopremium__1_-removebg-preview.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index10.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index3.html">Marcas</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Productos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Repuestos.html">Repuestos</a></li>
+                            <li><a class="dropdown-item" href="accesorios.html">Accesorios</a></li>
+                            <li><a class="dropdown-item" href="electricos.html">Electricos</a></li>
+                            <li><a class="dropdown-item" href="suspencion.html">Suspención</a></li>
+                            <li><a class="dropdown-item" href="transmision.html">Transmición</a></li>
+                            <li><a class="dropdown-item" href="Llantas.html">Llantas</a></li>
+                            <li><a class="dropdown-item" href="Lubricantes.html">Lubricantes</a></li>
+                            <li>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                <button class="btn btn-outline-light" id="modoBtn" onclick="toggleMode()">Modo Claro</button>
+
+                
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="Imagenes/LUBRICANTES/mobil2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Mobil Super Moto™ 4T 20W-50</h5>
+                        <p class="card-price">$124.600</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" id="animatedCard">
+                    <div class="card-body">
+                        <h5 class="card-title">Mobil Super Moto™ 4T 20W-50</h5>
+                        <p class="card-text">Es un lubricante que extiende la vida del motor con la tecnología "clean
+                            engine". Protege tu motor con aceites minerales y aditivos premium, supera estándares
+                            industriales, prolongando la vida de su moto.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Información de la Empresa</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis malesuada ligula justo, nec
+                        consequat ligula vestibulum sed.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Redes Sociales</h5>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Dirección</h5>
+                    <p>123 Calle Principal, Ciudad, País</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMode() {
+            const body = document.body;
+            const navbar = document.querySelector('.navbar');
+            const modeButton = document.getElementById('modoBtn');
+
+            // Alternar clases de modo claro y oscuro
+            body.classList.toggle('light-mode');
+            body.classList.toggle('dark-mode');
+            navbar.classList.toggle('light-mode');
+            navbar.classList.toggle('dark-mode');
+
+            // Cambiar el texto del botón según el modo
+            if (body.classList.contains('dark-mode')) {
+                modeButton.innerHTML = 'Modo Claro';
+            } else {
+                modeButton.innerHTML = 'Modo Oscuro';
+            }
+        }
+
+        const animatedCard = document.getElementById('animatedCard');
+
+        animatedCard.addEventListener('mouseenter', () => {
+            animatedCard.style.transition = 'transform 0.3s ease-in-out';
+            animatedCard.style.transform = 'translateY(-5px)';
+        });
+
+        animatedCard.addEventListener('mouseleave', () => {
+            animatedCard.style.transition = 'transform 0.3s ease-in-out';
+            animatedCard.style.transform = 'translateY(0)';
+        });
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

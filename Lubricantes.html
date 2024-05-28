@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lubricantes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 80px;
+            /* Altura del navbar */
+            background-color: #f8f9fa;
+            /* Color de fondo del cuerpo */
+        }
+
+        .navbar {
+            background-color: #000000;
+            /* Color de fondo del navbar */
+        }
+
+        .navbar-brand img {
+            max-height: 60px;
+            /* Altura máxima del logo */
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #fff;
+            /* Color de texto de los enlaces */
+        }
+
+        .productos {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .productos h2 {
+            margin-bottom: 20px;
+        }
+
+        .card {
+            border: 1px solid #dee2e6;
+            /* Borde de las tarjetas */
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 20px;
+            /* Espacio entre tarjetas */
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            /* Efecto de elevación en hover */
+        }
+
+        .card-title {
+            color: #333;
+            /* Color del título de la tarjeta */
+        }
+
+        .card-text {
+            color: #666;
+            /* Color del texto de la tarjeta */
+        }
+
+        .footer {
+            background-color: #000000;
+            /* Color de fondo del footer */
+            color: #fff;
+            /* Color del texto del footer */
+            padding: 50px 0;
+            /* Espaciado interno del footer */
+        }
+
+        .footer a {
+            color: #fff;
+            /* Color de los enlaces del footer */
+        }
+
+        /* Estilos para el modo claro */
+        body.light-mode {
+            background-color: #f8f9fa;
+            color: #000000;
+        }
+
+        .navbar.light-mode {
+            background-color: #000305;
+        }
+
+        /* Estilos para el modo oscuro */
+        body.dark-mode {
+            background-color: #222;
+            color: #fff;
+        }
+
+        .navbar.dark-mode {
+            background-color: #111;
+        }
+
+        .container {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .title-section {
+            margin-top: 20px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .title-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #343a40;
+        }
+
+        /* Estilos para el filtro de búsqueda */
+        .search-filter {
+            margin-bottom: 20px;
+        }
+
+        .search-filter input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        /* Estilos para reducir la altura del carrusel */
+        .carousel-inner img {
+            max-height: 300px;
+            /* Ajusta este valor según sea necesario */
+            object-fit: cover;
+            /* Para que la imagen se ajuste correctamente */
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Proyectof/Proyectof/index.html">
+                <img src="motopremium__1_-removebg-preview.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index10.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index3.html">Marcas</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Productos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Repuestos.html">Repuestos</a></li>
+                            <li><a class="dropdown-item" href="accesorios.html">Accesorios</a></li>
+                            <li><a class="dropdown-item" href="electricos.html">Eléctricos</a></li>
+                            <li><a class="dropdown-item" href="suspencion.html">Suspensión</a></li>
+                            <li><a class="dropdown-item" href="transmision.html">Transmisión</a></li>
+                            <li><a class="dropdown-item" href="Llantas.html">Llantas</a></li>
+                            <li><a class="dropdown-item" href="Lubricantes.html">Lubricantes</a></li>
+                            <li>
+                         </li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                <button class="btn btn-outline-light" id="modoBtn" onclick="toggleMode()">Modo Claro</button>
+
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carrusel de imágenes -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="Imagenes/PRODUCTOS/carruselaceite.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="Imagenes/LUBRICANTES/carrusel2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="Imagenes/LUBRICANTES/carrusel3.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+
+    <div class="container">
+        <div class="title-section">
+            <h2>Lubricantes</h2>
+        </div>
+        <!-- Agregar filtro de búsqueda -->
+        <div class="search-filter">
+            <input type="text" id="searchInput" placeholder="Buscar producto..." onkeyup="filterProducts()">
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <a href="Lumobil1.html" style="text-decoration: none; color: inherit;">
+                    <div class="card">
+                        <img src="Imagenes/LUBRICANTES/mobil1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Mobil Super Moto™ 4T MX 10W-40</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="Lumobil2.html" style="text-decoration: none; color: inherit;">
+                    <div class="card">
+                        <img src="Imagenes/LUBRICANTES/mobil2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Mobil Super Moto™ 4T 20W-50</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="Lumobil3.html" style="text-decoration: none; color: inherit;">
+                    <div class="card">
+                        <img src="Imagenes/LUBRICANTES/mobil3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Mobil Super Moto™ 4T MX 15W-50</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="Lumobil4.html" style="text-decoration: none; color: inherit;">
+                    <div class="card">
+                        <img src="Imagenes/LUBRICANTES/mobil4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Mobil Super Moto™ Scooter MX 10W-40</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Información de la Empresa</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis malesuada ligula justo, nec
+                        consequat ligula vestibulum sed.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Redes Sociales</h5>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Dirección</h5>
+                    <p>123 Calle Principal, Ciudad, País</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        function toggleMode() {
+            const body = document.body;
+            const navbar = document.querySelector('.navbar');
+            const title = document.querySelector('.title-section h2'); // Seleccionar el título "Lubricantes"
+
+            if (body.classList.contains('light-mode')) {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                navbar.classList.remove('light-mode');
+                navbar.classList.add('dark-mode');
+                document.getElementById('modoBtn').innerHTML = 'Modo Claro';
+                title.style.color = '#fff'; // Cambiar el color del título a blanco
+            } else {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                navbar.classList.remove('dark-mode');
+                navbar.classList.add('light-mode');
+                document.getElementById('modoBtn').innerHTML = 'Modo Oscuro';
+                title.style.color = '#343a40'; // Cambiar el color del título a su color original
+            }
+        }
+        // Función para filtrar productos
+        function filterProducts() {
+            // Obtener el valor del input de búsqueda
+            var filterValue = document.getElementById('searchInput').value.toUpperCase();
+            // Obtener todas las tarjetas de producto
+            var cards = document.querySelectorAll('.card');
+
+            // Iterar sobre cada tarjeta de producto
+            cards.forEach(function(card) {
+                // Obtener el título del producto de la tarjeta
+                var title = card.querySelector('.card-title');
+                // Convertir el título a mayúsculas
+                var titleText = title.textContent.toUpperCase();
+                // Comprobar si el título del producto contiene el texto de búsqueda
+                if (titleText.indexOf(filterValue) > -1) {
+                    // Mostrar la tarjeta si coincide con el filtro
+                    card.style.display = "";
+                } else {
+                    // Ocultar la tarjeta si no coincide con el filtro
+                    card.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
